@@ -1,0 +1,12 @@
+{% extends 'index.html' %}
+
+{% block conteudo %}
+    <h1>New produto</h1>
+    <form action="{% url 'new_produto' %}"  method="post">
+        {% csrf_token %}
+        {{ produtos.as_p}}
+        <input type="submit" value="Enviar">
+        
+        
+        
+{%  endblock %}
